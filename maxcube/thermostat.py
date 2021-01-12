@@ -1,14 +1,15 @@
-from maxcube.device import MaxDevice
+from maxcube.wallthermostat import MaxWallThermostat
 
 
-class MaxThermostat(MaxDevice):
+class MaxThermostat(MaxWallThermostat):
     def __init__(self):
         super(MaxThermostat, self).__init__()
-        self.comfort_temperature = None
-        self.eco_temperature = None
-        self.max_temperature = None
-        self.min_temperature = None
+        self.temperature_offset = None
+        self.window_open_temperature = None
+        self.window_open_duration = None
+        self.boost_duration = None
+        self.boost_valve_position = None
+        self.decalcification = None
+        self.max_valve_setting = None
+        self.valve_offset = None
         self.valve_position = None
-        self.target_temperature = None
-        self.actual_temperature = None
-        self.mode = None
