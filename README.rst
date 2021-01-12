@@ -38,9 +38,9 @@ On my Jeedom widget, I have a temerature "+" button that increases the temp by 0
     eq3/maxcube/set/room/3/temperature 21
     
 
-Since I don't want to send each of the messages to the device, the deamon adds each task to a "todo list", replacing commands that are of the same type (temperature setting for room N for example). When the todo list has tasks and has not been modified within the last 2 seconds, it is processed (and locked not to accepts new tasks before the end of pocessing). This way, I can press 4 times "+" and have only one changes actually sent to the device.
+Since I don't want to send each of the messages to the device, the deamon adds each task to a "todo list", replacing commands that are of the same type (temperature setting for room N for example). When the todo list has tasks and has not been modified within the last 2 seconds, it is processed (and locked not to accepts new tasks before the end of processing). This way, I can press 4 times "+" and have only one changes actually sent to the device.
 
-For setting programs, I use files preset files. My need was to change somme programs every week (kids at home / kids not at home).
+For setting programs, I use files preset files. My need was to change some programs every week (kids at home / kids not at home).
 Here's an example of a program file:
 /home/pi/eq3/programs/prog_kid_not_at_home.json:
 {
