@@ -9,7 +9,7 @@ maxcubed: is placed in /etc/init.d to launch the maxcubed.py daemon at startup o
 maxcubed.py: is a deamon that connects to the maxcube and never releases the connection to avoid the factory reset of the cube
 
 The deamon polls the cube every second and publishes changes (if any) in the eq3/maxcube/room/<number> topic.
-Then, every 5 minutes it published to the whole status in the same topics.
+Then, every 5 minutes it publishes to the whole status in the same topics.
 
 The deamon subscribes to the eq3/maxcube/set/# topic and accepts following commands:
 eq3/maxcube/set/room/<number>/mode {0|1|2|3|4}
