@@ -19,13 +19,14 @@ MAX_DEVICE_BATTERY_LOW = 1
 
 class MaxDevice(object):
     def __init__(self):
-        self.type = None
         self.rf_address = None
+        self.type = None
         self.room_id = None
-        self.name = None
+        self.firmware = None
         self.serial = None
+        self.name = None
+        self.initialized = None
         self.battery = None
-        self.programme = None
 
     def is_thermostat(self):
         return self.type in (MAX_THERMOSTAT, MAX_THERMOSTAT_PLUS)
@@ -41,10 +42,13 @@ class MaxDevice(object):
 
     def to_dict(self):
         data = {}
-        keys = ['type', 'rf_address', 'room_id', 'name', 'serial', 'battery',
-                'comfort_temperature', 'eco_temperature', 'max_temperature',
-                'min_temperature', 'valve_position', 'target_temperature',
-                'actual_temperature', 'mode', 'programme']
+        
+        keys = ['rf_address', 'type', 'room_id', 'firmware', 'serial', 'name', 'initialized',
+                'battery', 'comfort_temperature', 'eco_temperature', 'max_temperature',
+                'min_temperature', 'target_temperature', 'actual_temperature',
+                'locked', 'mode', 'vacation_until', 'temperature_offset', 'window_open_temperature',
+                'window_open_duration', 'boost_duration', 'boost_valve_position', 'decalcification', 
+                'max_valve_setting', 'valve_offset', 'valve_position', 'programme']
         for key in keys:
             data[key] = getattr(self, key, None)
         data['rf_address'] = self.rf_address
