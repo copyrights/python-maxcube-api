@@ -18,7 +18,7 @@ eq3/maxcube/set/room/<number>/program program_filename
 
 Note that a new mode "4" has been added to the standard maxcube modes (0=AUTO; 1=MANUAL; 2=VACATION; 3=BOOST)
 Mode 4 means "I'm at home", it's kind of mixed mode that does "manual" comfort temperature from 7:00am to 6:00pm, and then returns to AUTO mode.
-This is useful during vacation (or lockdown ;))
+This is useful during vacation (or lockdown ;)).
 
 On my Jeedom widget, I have a temerature "+" button that increases the temp by 0,5°C and a temperature "-" button that decreases the temp by 0,5°C, so when I push "+" to increase the temp from 19°C to 21°C, it sends several messages:
     eq3/maxcube/set/room/3/temperature 19.5
