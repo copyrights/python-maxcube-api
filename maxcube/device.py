@@ -44,7 +44,7 @@ class MaxDevice(object):
         keys = ['type', 'rf_address', 'room_id', 'name', 'serial', 'battery',
                 'comfort_temperature', 'eco_temperature', 'max_temperature',
                 'min_temperature', 'valve_position', 'target_temperature',
-                'actual_temperature', 'mode', 'programme']
+                'actual_temperature', 'mode', 'programme', 'is_open', 'initialized']
         for key in keys:
             data[key] = getattr(self, key, None)
         data['rf_address'] = self.rf_address
